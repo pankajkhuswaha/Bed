@@ -27,7 +27,7 @@
 .build-your-bed-box {
     right: 0;
     width: 35%;
-    height: 70%;
+    height: 35%;
     overflow-x: hidden;
     background-color: white;
     position: absolute;
@@ -110,7 +110,7 @@
         display: block !important;
     }
 
-    li.nav-item {
+    .build-your-bed-box ul li.nav-item {
         width: 80px !important;
     }
 
@@ -149,5 +149,71 @@
         width: 44%;
         margin-left: 58px;
         margin-top: -9px;
+    }
+}
+
+.dimension_tab {
+    width: 100%;
+    border: 1px solid skyblue;
+}
+
+
+.dimension_tab .nav-item {
+    display: flex;
+    justify-content: center;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #5bbdec;
+}
+
+.dimension_tab .nav-item .nav-link.active,
+.dimension_tab .nav-item .nav-link:hover {
+    border: 0;
+    background-color: #0e3f70;
+    color: #fff;
+    margin: 0;
+    padding: 12px;
+    display: flex;
+    padding: 12px;
+    justify-content: center;
+    align-items: center;
+}
+
+.dimension_tab .nav-item .nav-link {
+    width: 40%;
+    margin: 0;
+    padding: 12px;
+    font-size: 14px;
+    color: #0e3f70;
+    display: flex;
+    padding: 12px;
+    justify-content: center;
+    opacity: 1;
+    align-items: center;
+    border-right: 1px solid #fff;
+    background-color: #ededed;
+}
+
+p.mt-2 {
+    width: 50%;
+}
+.small{
+    width: 40%;
+}
+.large{
+    width: 60%;
+}
+@media only screen and (min-width: 200px) and (max-width: 1223px) {
+
+    .dimension_tab .main-container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .small ,.large{
+        width: 100%;
     }
 }
