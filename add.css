@@ -1,0 +1,206 @@
+.text-center {
+    width: 190px;
+}
+
+#build-own-bed {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    background: radial-gradient(#fff, #baddf1);
+}
+
+#build-your-bed-box {
+    background: white;
+    width: 620px;
+    min-height: 50vh;
+    border-radius: 12px;
+    overflow: hidden;
+    height: fit-content;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+}
+
+.nav-tabs {
+    border-bottom: 1px solid #dee2e6;
+    height: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+#build-your-bed-box .nav-item {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    font-weight: 600;
+    background: #5bbdec;
+    font-size: 1.2rem;
+}
+
+#build-your-bed-box .nav-tabs .nav-link {
+    margin-bottom: 0;
+    background: transparent;
+    padding: 1px;
+    border: none;
+    line-height: 1;
+    height: 90px;
+    font-weight: 600;
+    color: #fff;
+    width: 100%;
+    font-family: Montserrat, sans-serif;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+#build-your-bed-box .nav-tabs .nav-link:hover,
+.nav-link.active {
+    background: black !important;
+    color: white;
+}
+
+.fdark {
+    font-weight: 700;
+}
+
+.btn-primary,
+.btn-primary:hover {
+    background: #5bbdec;
+    border-color: #5bbdec;
+    width: 150px;
+}
+
+#build-own-bed::-webkit-scrollbar {
+    width: 0;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+#build-own-bed {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
+
+@media only screen and (min-width: 200px) and (max-width: 1223px) {
+    #build-your-bed-box {
+        position: static;
+        width: 100% !important;
+    }
+
+    .box-container {
+        width: 100% !important;
+    }
+
+    #bed_viewer {
+        width: 100% !important;
+    }
+
+    #build-own-bed {
+        flex-direction: column;
+    }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 600px) {
+    .accordion-button::after {
+        margin-right: 4px;
+    }
+
+    .accordion-button {
+        padding: 0;
+    }
+
+    div#build-own-bed {
+        padding: 4px !important;
+    }
+
+    .avail-opt {
+        font-size: small;
+        width: 120px !important;
+        border-radius: 9999px;
+        padding: 2px;
+    }
+
+    .dropdown_btn h3,
+    .accordion-body h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (min-width: 200px) and (max-width: 1000px) {
+    div#bed_viewer {
+        position: fixed;
+        height: 52vh;
+        z-index: 999;
+        left: 0;
+        display: flex;
+        top: -12vh;
+        background: radial-gradient(#fff, #baddf1);
+        justify-content: center;
+    }
+
+    .d-flex.align-items-center.justify-content-center.w-50.box-container {
+        margin-top: 25vh;
+    }
+}
+
+.dropdown_btn {
+    color: #12032a;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: white;
+    padding: 14px 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, color 0.2s ease;
+}
+
+.dropdown_btn h3 {
+    font-weight: 700;
+}
+
+.dropdown_btn .avail-opt {
+    background: #5bbdec;
+    padding: 0px 8px;
+    border-radius: 12px;
+}
+
+.dropdown_item {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    width: 135px;
+    min-height: 100px;
+    flex-direction: column;
+    padding: 2px 0px;
+    margin: 4px 0px;
+    border: 2px solid transparent;
+}
+
+.dropdown_item p {
+    margin: 0;
+    font-size: small;
+    width: 120px;
+    text-align: center;
+}
+
+p {
+    margin: 0;
+}
+
+.nav-item p {
+    font-size: 14px;
+    margin-top: 4px;
+}
+.none ,.iconSize{
+    width: 130px;
+    height: 130px;
+}
+.none{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.none img{
+    width: 60px;
+    height: 60px;
+}

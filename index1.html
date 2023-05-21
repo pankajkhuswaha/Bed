@@ -1,0 +1,2306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="add.css" />
+    <script src="script.js"></script>
+    <!-- <script src="jquery-3.6.4.min.js"></script> -->
+  </head>
+
+  <body>
+    <div id="build-own-bed" class="p-4">
+      <div id="bed_viewer" class="w-50 overflow-hidden">
+        <img
+          src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/6ft.png?v=1682738420"
+          alt=""
+          class="img-fluid"
+        />
+      </div>
+      <div
+        class="d-flex align-items-center justify-content-center w-50 box-container"
+      >
+        <div id="build-your-bed-box" class="shadow-md">
+          <ul
+            class="nav nav-tabs"
+            id="myTab"
+            role="tablist"
+            style="height: 90px"
+          >
+            <li class="nav-item">
+              <button
+                class="nav-link active"
+                id="step-1-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#step-1"
+                type="button"
+                role="tab"
+                aria-controls="step-1"
+                aria-selected="false"
+              >
+                <strong>Step 1 </strong><br />
+                <p class="font-sm">(Size, Frame etc)</p>
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                class="nav-link"
+                id="step-2-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#step-2"
+                type="button"
+                role="tab"
+                aria-controls="step-2"
+                aria-selected="false"
+              >
+                <strong>Step 2 </strong>
+                <p class="text-">(Bed Height, Feet Options,etc)</p>
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                class="nav-link"
+                id="step-4-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#step-4"
+                type="button"
+                role="tab"
+                aria-controls="step-4"
+                aria-selected="false"
+              >
+                <strong>Step 3 </strong><br />
+                <p>(Add Ons, Mattress, Ottoman Box)</p>
+              </button>
+            </li>
+            <li class="nav-item">
+              <button
+                class="nav-link"
+                id="step-5-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#step-5"
+                type="button"
+                role="tab"
+                aria-controls="step-5"
+                aria-selected="false"
+              >
+                <strong>Step 4 </strong><br />
+                <p>(Delivery - Assembly &amp; Disposal Options)</p>
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <!-- TODO ######## Step1 ########### -->
+            <div
+              class="tab-pane fade show active"
+              id="step-1"
+              role="tabpanel"
+              aria-labelledby="step-1-tab"
+            >
+              <div class="accordion" id="accordionExample">
+            <!-- * ######## Step1 Size ########### -->
+                <div class="accordion-item">
+                  <div
+                    class="accordion-button collapsed shadow-none bg-white pl-0 py-0 py-0"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    <div class="dropdown_btn">
+                      <div class="d-flex gap-4">
+                        <img
+                          class=""
+                          src="https://www.happybeds.co.uk/static/version1678690731/frontend/Elevate/theme/en_GB/Elevate_BespokeBeds/images/size.svg"
+                          alt="Scale"
+                          width="50px"
+                        />
+                        <div>
+                          <h3>Size</h3>
+                          <p id="size_id">3ft small</p>
+                        </div>
+                      </div>
+                      <p class="avail-opt text-center p-1">
+                        6 option available
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    id="collapseOne"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <div class="p-3 d-flex flex-wrap gap-2">
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          id="3ft_small"
+                          class="dropdown_item size-opt active"
+                        >
+                          <img
+                            class="iconSize"
+                            alt=""
+                            src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/3FT%20Single.png?v=1684068292"
+                          />
+                          <p>3FT Single</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          id="4ft_small_double"
+                          class="dropdown_item size-opt"
+                        >
+                          <img
+                            class="iconSize"
+                            alt=""
+                            src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/4FT%20Small%20Double.png?v=1684068318"
+                          />
+                          <p>4FT Small Double</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          id="4ft_double"
+                          class="dropdown_item size-opt"
+                        >
+                          <img
+                            class="iconSize"
+                            alt=""
+                            src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/4Ft6%20Double.png?v=1684068334"
+                          />
+                          <p>4FT6 Double</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          id="5ft_king"
+                          class="dropdown_item size-opt"
+                        >
+                          <img
+                            class="iconSize"
+                            alt=""
+                            src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/4FT%20King.png?v=1684068304"
+                          />
+                          <p>5FT King</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          id="6ft_superking"
+                          class="dropdown_item size-opt"
+                        >
+                          <img
+                            class="iconSize"
+                            alt=""
+                            src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/6FT%20SuperKing.png?v=1684068348"
+                          />
+                          <p>6FT SuperKing</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            <!-- * ######## Step1 BedFrameshape ########### -->              
+                <div class="accordion-item">
+                  <div
+                    class="accordion-button collapsed shadow-none bg-white pl-0 py-0"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    <div class="dropdown_btn">
+                      <div class="d-flex gap-4">
+                        <img
+                          class=""
+                          src="https://www.happybeds.co.uk/static/version1678690731/frontend/Elevate/theme/en_GB/Elevate_BespokeBeds/images/size.svg"
+                          alt="Scale"
+                          width="50px"
+                        />
+                        <div>
+                          <h3>BedFrame Shape</h3>
+                          <div class="">
+                            <p id="headboard_id">Plain Jane</p>
+                            <p id="footboard_id">Plain Jane</p>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="avail-opt text-center p-1">
+                        2 categories available
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    id="collapseTwo"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingTwo"
+                    data-bs-parent="#"
+                  >
+                    <div class="accordion-body p-0 border-none">
+                      <div class="accordion" id="">
+                        <div class="accordion-item border-none">
+                          <div
+                            class="accordion-button collapsed shadow-none bg-white pl-0 py-0"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwoa"
+                            aria-expanded="false"
+                            aria-controls="collapseTwoa"
+                          >
+                            <div class="dropdown_btn">
+                              <div class="d-flex gap-4 align-items-center">
+                                <img
+                                  class=""
+                                  src="https://www.happybeds.co.uk/static/version1678690731/frontend/Elevate/theme/en_GB/Elevate_BespokeBeds/images/headboard.svg"
+                                  alt="Scale"
+                                  width="50px"
+                                />
+                                <div>
+                                  <h3>Headboard</h3>
+                                </div>
+                              </div>
+                              <p class="avail-opt text-center p-1">
+                                7 option available
+                              </p>
+                            </div>
+                          </div>
+                          <div
+                            id="collapseTwoa"
+                            class="accordion-collapse collapse"
+                          >
+                            <div class="accordion-body p-0 border-none px-4">
+                              <div
+                                class="d-flex flex-wrap gap-2 justify-content-center align-items-center"
+                              >
+                                <div class="d-flex flex-wrap gap-2 w-100">
+                                  <div
+                                    onclick="hanldleselectoption(this)"
+                                    id="Plain jane"
+                                    class="dropdown_item bed-shape-opt headboard active"
+                                  >
+                                    <img
+                                      class="iconSize"
+                                      src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/Plain%20Jane.png"
+                                      alt=""
+                                    />
+                                    <p>Plain Jane</p>
+                                  </div>
+                                  <div
+                                    onclick="hanldleselectoption(this)"
+                                    id="Rose"
+                                    class="dropdown_item bed-shape-opt headboard"
+                                  >
+                                    <img
+                                      class="iconSize"
+                                      src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/Rose.png"
+                                      alt=""
+                                    />
+                                    <p>Rose</p>
+                                  </div>
+                                  <div
+                                    onclick="hanldleselectoption(this)"
+                                    id="Kensington"
+                                    class="dropdown_item bed-shape-opt headboard"
+                                  >
+                                    <img
+                                      class="iconSize"
+                                      src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/Kensington.png"
+                                      alt=""
+                                    />
+                                    <p>Kensington</p>
+                                  </div>
+                                  <div
+                                    onclick="hanldleselectoption(this)"
+                                    id="knightsbridge"
+                                    class="dropdown_item bed-shape-opt headboard"
+                                  >
+                                    <img
+                                      class="iconSize"
+                                      src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/Knightsbridge.png"
+                                      alt=""
+                                    />
+                                    <p>Knightsbridge</p>
+                                  </div>
+                                  <div
+                                    onclick="hanldleselectoption(this)"
+                                    id="Hampton"
+                                    class="dropdown_item bed-shape-opt headboard"
+                                  >
+                                    <img
+                                      class="iconSize"
+                                      src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/Hampton.png"
+                                      alt=""
+                                    />
+                                    <p>Hampton</p>
+                                  </div>
+                                  <div
+                                    onclick="hanldleselectoption(this)"
+                                    id="Eva"
+                                    class="dropdown_item bed-shape-opt headboard"
+                                  >
+                                    <img
+                                      class="iconSize"
+                                      src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/Eva.png"
+                                      alt=""
+                                    />
+                                    <p>Eva</p>
+                                  </div>
+                                  <div
+                                    onclick="hanldleselectoption(this)"
+                                    id="Arabella"
+                                    class="dropdown_item bed-shape-opt headboard"
+                                  >
+                                    <img
+                                      class="iconSize"
+                                      src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/Arabella.png"
+                                      alt=""
+                                    />
+                                    <p>Arabella</p>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item border-none">
+                          <div
+                            class="accordion-button collapsed collapsed shadow-none bg-white pl-0 py-0"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwob"
+                            aria-expanded="false"
+                            aria-controls="collapseTwob"
+                          >
+                            <div class="dropdown_btn">
+                              <div class="d-flex gap-4 align-items-center">
+                                <img
+                                  class=""
+                                  width="50px"
+                                  src="https://www.happybeds.co.uk/static/version1678690731/frontend/Elevate/theme/en_GB/Elevate_BespokeBeds/images/headboard.svg"
+                                  alt="Scale"
+                                />
+                                <div>
+                                  <h3>Footboard</h3>
+                                </div>
+                              </div>
+                              <p class="avail-opt text-center p-1">
+                                7 option available
+                              </p>
+                            </div>
+                          </div>
+                          <div
+                            id="collapseTwob"
+                            class="accordion-collapse collapse"
+                          >
+                            <div class="accordion-body p-0 border-none px-4">
+                              <div class="d-flex flex-wrap gap-2">
+                                <div
+                                  onclick="hanldleselectoption(this)"
+                                  id="Plain jane"
+                                  class="dropdown_item bed-shape-opt footboard active"
+                                >
+                                  <img
+                                    class="iconSize"
+                                    src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/Plain%20Jane.png"
+                                    alt=""
+                                  />
+                                  <p>Plain Jane</p>
+                                </div>
+                                <div
+                                  onclick="hanldleselectoption(this)"
+                                  id="Rose"
+                                  class="dropdown_item bed-shape-opt footboard"
+                                >
+                                  <img
+                                    class="iconSize"
+                                    src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/Rose.png"
+                                    alt=""
+                                  />
+                                  <p>Rose</p>
+                                </div>
+                                <div
+                                  onclick="hanldleselectoption(this)"
+                                  id="Kensington"
+                                  class="dropdown_item bed-shape-opt footboard"
+                                >
+                                  <img
+                                    class="iconSize"
+                                    src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/Kensington.png"
+                                    alt=""
+                                  />
+                                  <p>Kensington</p>
+                                </div>
+                                <div
+                                  onclick="hanldleselectoption(this)"
+                                  id="knightsbridge"
+                                  class="dropdown_item bed-shape-opt footboard"
+                                >
+                                  <img
+                                    class="iconSize"
+                                    src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/Knightsbridge.png"
+                                    alt=""
+                                  />
+                                  <p>Knightsbridge</p>
+                                </div>
+                                <div
+                                  onclick="hanldleselectoption(this)"
+                                  id="Hampton"
+                                  class="dropdown_item bed-shape-opt footboard"
+                                >
+                                  <img
+                                    class="iconSize"
+                                    src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/Hampton.png"
+                                    alt=""
+                                  />
+                                  <p>Hampton</p>
+                                </div>
+                                <div
+                                  onclick="hanldleselectoption(this)"
+                                  id="Eva"
+                                  class="dropdown_item bed-shape-opt footboard"
+                                >
+                                  <img
+                                    class="iconSize"
+                                    src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/Eva.png"
+                                    alt=""
+                                  />
+                                  <p>Eva</p>
+                                </div>
+                                <div
+                                  onclick="hanldleselectoption(this)"
+                                  id="Arabella"
+                                  class="dropdown_item bed-shape-opt footboard"
+                                >
+                                  <img
+                                    class="iconSize"
+                                    src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/Arabella.png"
+                                    alt=""
+                                  />
+                                  <p>Arabella</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            <!-- * ######## Step1 upholestery design ########### -->            
+                <div class="accordion-item">
+                  <div
+                    class="accordion-button collapsed shadow-none bg-white pl-0 py-0"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour"
+                    aria-expanded="false"
+                    aria-controls="collapseFour"
+                  >
+                    <div class="dropdown_btn">
+                      <div class="d-flex gap-4">
+                        <img
+                          class=""
+                          src="https://www.happybeds.co.uk/static/version1678690731/frontend/Elevate/theme/en_GB/Elevate_BespokeBeds/images/size.svg"
+                          alt="Scale"
+                          width="50px"
+                        />
+                        <div>
+                          <h3>Upholstery Design</h3>
+                          <div class="">
+                            <p id="headboard_design_id">Plain</p>
+                            <p id="footboard_design_id">Plain</p>
+                          </div>
+                        </div>
+                      </div>
+                      <p class="avail-opt text-center p-1">
+                        2 categories available
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    id="collapseFour"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingFour"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body border-none p-0">
+                      <div class="accordion" id="accordionExample">
+                        <div class="accordion-item border-none">
+                          <div
+                            class="accordion-button collapsed shadow-none bg-white pl-0 py-0"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseFoura"
+                            aria-expanded="true"
+                            aria-controls="collapseFoura"
+                          >
+                            <div class="dropdown_btn">
+                              <div class="d-flex gap-4 align-items-center">
+                                <img
+                                  class=""
+                                  src="https://www.happybeds.co.uk/static/version1678690731/frontend/Elevate/theme/en_GB/Elevate_BespokeBeds/images/headboard.svg"
+                                  alt="Scale"
+                                  width="50px"
+                                />
+                                <div>
+                                  <h3>Headboard</h3>
+                                </div>
+                              </div>
+                              <p class="avail-opt text-center p-1">
+                                12 option available
+                              </p>
+                            </div>
+                          </div>
+                          <div
+                            id="collapseFoura"
+                            class="accordion-collapse collapse show"
+                          >
+                            <div class="accordion-body p-0 border-none px-4">
+                              <div
+                                class="d-flex flex-wrap gap-2 justify-content-center align-items-center"
+                              >
+                                <div
+                                  onclick="hanldleselectoption(this)"
+                                  id="Plain"
+                                  class="dropdown_item bed-upholstery-opt headboard active"
+                                >
+                                  <img class="iconSize" alt="" />
+                                  <p>Plain</p>
+                                </div>
+                                <div
+                                  onclick="hanldleselectoption(this)"
+                                  id="Lines horizontal - large"
+                                  class="dropdown_item bed-upholstery-opt headboard"
+                                >
+                                  <img class="iconSize" alt="" />
+                                  <p>Lines horizontal - large</p>
+                                </div>
+                                <div
+                                  onclick="hanldleselectoption(this)"
+                                  id="Lines Horizontal - small"
+                                  class="dropdown_item bed-upholstery-opt headboard"
+                                >
+                                  <img class="iconSize" alt="" />
+                                  <p>Lines Horizontal - small</p>
+                                </div>
+                                <div
+                                  onclick="hanldleselectoption(this)"
+                                  id="Lines Vertical - large"
+                                  class="dropdown_item bed-upholstery-opt headboard"
+                                >
+                                  <img class="iconSize" alt="" />
+                                  <p>Lines Vertical - large</p>
+                                </div>
+                                <div
+                                  onclick="hanldleselectoption(this)"
+                                  id="Lines Vertical - small"
+                                  class="dropdown_item bed-upholstery-opt headboard"
+                                >
+                                  <img class="iconSize" alt="" />
+                                  <p>Lines Vertical - small</p>
+                                </div>
+                                <div
+                                  onclick="hanldleselectoption(this)"
+                                  id="Cube Design - Large"
+                                  class="dropdown_item bed-upholstery-opt headboard"
+                                >
+                                  <img class="iconSize" alt="" />
+                                  <p>Cube Design - Large</p>
+                                </div>
+                                <div
+                                  onclick="hanldleselectoption(this)"
+                                  id="Cube Design - Small"
+                                  class="dropdown_item bed-upholstery-opt headboard"
+                                >
+                                  <img class="iconSize" alt="" />
+                                  <p>Cube Design - small</p>
+                                </div>
+                                <div
+                                  onclick="hanldleselectoption(this)"
+                                  id="Sunrise"
+                                  class="dropdown_item bed-upholstery-opt headboard"
+                                >
+                                  <img class="iconSize" alt="" />
+                                  <p>Sunrise</p>
+                                </div>
+                                <div
+                                  onclick="hanldleselectoption(this)"
+                                  id="Victoria"
+                                  class="dropdown_item bed-upholstery-opt headboard"
+                                >
+                                  <img class="iconSize" alt="" />
+                                  <p>Victoria</p>
+                                </div>
+                                <div
+                                  onclick="hanldleselectoption(this)"
+                                  id="ChesterField-Large"
+                                  class="dropdown_item bed-upholstery-opt headboard"
+                                >
+                                  <img class="iconSize" alt="" />
+                                  <p>ChesterField-Large</p>
+                                </div>
+                                <div
+                                  onclick="hanldleselectoption(this)"
+                                  id="Chesterfield-Small"
+                                  class="dropdown_item bed-upholstery-opt headboard"
+                                >
+                                  <img class="iconSize" alt="" />
+                                  <p>Chesterfield-Small</p>
+                                </div>
+                                <div
+                                  onclick="hanldleselectoption(this)"
+                                  id="Majestic - Multi Panel"
+                                  class="dropdown_item bed-upholstery-opt headboard"
+                                >
+                                  <img class="iconSize" alt="" />
+                                  <p>Majestic - Multi Panel</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item border-none">
+                        <div
+                          class="accordion-button collapsed collapsed shadow-none bg-white pl-0 py-0"
+                          type="button"
+                          data-bs-toggle="collapse"
+                          data-bs-target="#collapseFourb"
+                          aria-expanded="false"
+                          aria-controls="collapseFourb"
+                        >
+                          <div class="dropdown_btn">
+                            <div class="d-flex gap-4 align-items-center">
+                              <img
+                                class=""
+                                src="https://www.happybeds.co.uk/static/version1678690731/frontend/Elevate/theme/en_GB/Elevate_BespokeBeds/images/headboard.svg"
+                                alt="Scale"
+                                width="50px"
+                              />
+                              <div>
+                                <h3>Footboard</h3>
+                              </div>
+                            </div>
+                            <p class="avail-opt text-center p-1">
+                              12 option available
+                            </p>
+                          </div>
+                        </div>
+                        <div
+                          id="collapseFourb"
+                          class="accordion-collapse collapse"
+                        >
+                          <div class="accordion-body p-0 border-none px-4">
+                            <div class="d-flex flex-wrap gap-2">
+                              <div
+                                onclick="hanldleselectoption(this)"
+                                id="Plain"
+                                class="dropdown_item bed-upholstery-opt footboard active"
+                              >
+                                <img class="iconSize" alt="" />
+                                <p>Plain</p>
+                              </div>
+                              <div
+                                onclick="hanldleselectoption(this)"
+                                id="Lines horizontal - large"
+                                class="dropdown_item bed-upholstery-opt footboard"
+                              >
+                                <img class="iconSize" alt="" />
+                                <p>Lines horizontal - large</p>
+                              </div>
+                              <div
+                                onclick="hanldleselectoption(this)"
+                                id="Lines Horizontal - small"
+                                class="dropdown_item bed-upholstery-opt footboard"
+                              >
+                                <img class="iconSize" alt="" />
+                                <p>Lines Horizontal - small</p>
+                              </div>
+                              <div
+                                onclick="hanldleselectoption(this)"
+                                id="Lines Vertical - large"
+                                class="dropdown_item bed-upholstery-opt footboard"
+                              >
+                                <img class="iconSize" alt="" />
+                                <p>Lines Vertical - large</p>
+                              </div>
+                              <div
+                                onclick="hanldleselectoption(this)"
+                                id="Lines Vertical - small"
+                                class="dropdown_item bed-upholstery-opt footboard"
+                              >
+                                <img class="iconSize" alt="" />
+                                <p>Lines Vertical - small</p>
+                              </div>
+                              <div
+                                onclick="hanldleselectoption(this)"
+                                id="Cube Design - Large"
+                                class="dropdown_item bed-upholstery-opt footboard"
+                              >
+                                <img class="iconSize" alt="" />
+                                <p>Cube Design - Large</p>
+                              </div>
+                              <div
+                                onclick="hanldleselectoption(this)"
+                                id="Cube Design - Small"
+                                class="dropdown_item bed-upholstery-opt headboard"
+                              >
+                                <img class="iconSize" alt="" />
+                                <p>Cube Design - small</p>
+                              </div>
+                              <div
+                                onclick="hanldleselectoption(this)"
+                                id="Sunrise"
+                                class="dropdown_item bed-upholstery-opt footboard"
+                              >
+                                <img class="iconSize" alt="" />
+                                <p>Sunrise</p>
+                              </div>
+                              <div
+                                onclick="hanldleselectoption(this)"
+                                id="Victoria"
+                                class="dropdown_item bed-upholstery-opt footboard"
+                              >
+                                <img class="iconSize" alt="" />
+                                <p>Victoria</p>
+                              </div>
+                              <div
+                                onclick="hanldleselectoption(this)"
+                                id="ChesterField-Large"
+                                class="dropdown_item bed-upholstery-opt footboard"
+                              >
+                                <img class="iconSize" alt="" />
+                                <p>ChesterField-Large</p>
+                              </div>
+                              <div
+                                onclick="hanldleselectoption(this)"
+                                id="Chesterfield-Small"
+                                class="dropdown_item bed-upholstery-opt footboard"
+                              >
+                                <img class="iconSize" alt="" />
+                                <p>Chesterfield-Small</p>
+                              </div>
+                              <div
+                                onclick="hanldleselectoption(this)"
+                                id="Majestic - Multi Panel"
+                                class="dropdown_item bed-upholstery-opt footboard"
+                              >
+                                <img class="iconSize" alt="" />
+                                <p>Majestic - Multi Panel</p>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            <!-- * ######## Step1 Addition headboard ########### -->            
+                <div class="accordion-item">
+                  <div
+                    class="accordion-button collapsed shadow-none bg-white pl-0 py-0"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFive"
+                    aria-expanded="false"
+                    aria-controls="collapseFive"
+                  >
+                    <div class="dropdown_btn">
+                      <div class="d-flex gap-4">
+                        <img
+                          class=""
+                          src="https://www.happybeds.co.uk/static/version1678690731/frontend/Elevate/theme/en_GB/Elevate_BespokeBeds/images/size.svg"
+                          alt="Scale"
+                          width="50px"
+                        />
+                        <div>
+                          <h3>Additional Headboard Features</h3>
+                          <!-- <div class="">
+                                      <p id="headboard_design_id">Plain</p>
+                                      <p id="footboard_design_id">Plain</p>
+                                    </div> -->
+                        </div>
+                      </div>
+                      <p class="avail-opt text-center p-1" style="width: 215px">
+                        2 categories available
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    id="collapseFive"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingFive"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body p-0 border-none">
+                      <div class="accordion" id="">
+                        <div class="accordion-item border-none">
+                          <div
+                            class="accordion-button collapsed shadow-none bg-white pl-0 py-0"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseFivea"
+                            aria-expanded="false"
+                            aria-controls="collapseFivea"
+                          >
+                            <div class="dropdown_btn">
+                              <div class="d-flex gap-4 align-items-center">
+                                <img
+                                  class=""
+                                  src="https://www.happybeds.co.uk/static/version1678690731/frontend/Elevate/theme/en_GB/Elevate_BespokeBeds/images/headboard.svg"
+                                  alt="Scale"
+                                  width="50px"
+                                />
+                                <div>
+                                  <h3>Headboard Wings</h3>
+                                </div>
+                              </div>
+                              <p class="avail-opt text-center p-1">
+                                3 option available
+                              </p>
+                            </div>
+                          </div>
+                          <div
+                            id="collapseFivea"
+                            class="accordion-collapse collapse"
+                          >
+                            <div class="accordion-body p-0 border-none px-4">
+                              <div
+                                class="d-flex flex-wrap gap-2 justify-content-center align-items-center"
+                              >
+                                <div class="d-flex flex-wrap gap-2 w-100">
+                                  <div
+                                    onclick="hanldleselectoption(this)"
+                                    class="dropdown_item feature-opt active"
+                                  >
+                                    <div class="none">
+                                      <img
+                                        class="iconSize"
+                                        src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/None.png"
+                                        alt=""
+                                      />
+                                    </div>
+                                    <p>None</p>
+                                  </div>
+                                  <div
+                                    onclick="hanldleselectoption(this)"
+                                    class="dropdown_item feature-opt"
+                                  >
+                                    <img
+                                      class="iconSize"
+                                      src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/Straight%20Wing.png"
+                                      alt=""
+                                    />
+                                    <p>StraightWing–Plain</p>
+                                  </div>
+                                  <div
+                                    onclick="hanldleselectoption(this)"
+                                    class="dropdown_item feature-opt"
+                                  >
+                                    <img
+                                      class="iconSize"
+                                      src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/Curved%20Wings.png"
+                                      alt=""
+                                    />
+                                    <p>CurvedWing–Plain</p>
+                                  </div>
+                                  <div
+                                    onclick="hanldleselectoption(this)"
+                                    class="feature-opt d-flex gap-1 justify-content-between w-100 align-items-center"
+                                  >
+                                    <h5>Would you Like to add Beading</h5>
+                                    <div class="d-flex gap-2">
+                                      <button class="btn btn-success">
+                                        Yes
+                                      </button>
+                                      <button class="btn btn-danger">No</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="accordion-item border-none">
+                          <div
+                            class="accordion-button collapsed collapsed shadow-none bg-white pl-0 py-0"
+                            type="button"
+                            data-bs-toggle="collapse"
+                            data-bs-target="#collapseFiveb"
+                            aria-expanded="false"
+                            aria-controls="collapseFiveb"
+                          >
+                            <div class="dropdown_btn">
+                              <div class="d-flex gap-4 align-items-center">
+                                <img
+                                  class=""
+                                  width="50px"
+                                  src="https://www.happybeds.co.uk/static/version1678690731/frontend/Elevate/theme/en_GB/Elevate_BespokeBeds/images/headboard.svg"
+                                  alt="Scale"
+                                />
+                                <div>
+                                  <h3>Headboard Bumper</h3>
+                                </div>
+                              </div>
+                              <p class="avail-opt text-center p-1">
+                                2 option available
+                              </p>
+                            </div>
+                          </div>
+                          <div
+                            id="collapseFiveb"
+                            class="accordion-collapse collapse"
+                          >
+                            <div class="accordion-body p-0 border-none px-4">
+                              <div
+                                class="d-flex flex-wrap gap-2 justify-content-center align-items-center"
+                              >
+                                <div class="d-flex flex-wrap gap-2 w-100">
+                                  <div
+                                    onclick="hanldleselectoption(this)"
+                                    class="dropdown_item feature-opt active"
+                                  >
+                                    <div class="none">
+                                      <img
+                                        class="iconSize"
+                                        src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/None.png"
+                                        alt=""
+                                      />
+                                    </div>
+                                    <p>None</p>
+                                  </div>
+                                  <div
+                                    onclick="hanldleselectoption(this)"
+                                    class="dropdown_item feature-opt"
+                                  >
+                                    <img
+                                      class="iconSize"
+                                      src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/Straight%20Wing.png"
+                                      alt=""
+                                    />
+                                    <p>Bumper Border – Plain</p>
+                                  </div>
+                                  <div
+                                    onclick="hanldleselectoption(this)"
+                                    class="feature-opt d-flex gap-1 justify-content-between w-100 align-items-center"
+                                  >
+                                    <h5>
+                                      Would you Like to add Bumper Beading
+                                    </h5>
+                                    <div class="d-flex gap-2">
+                                      <button class="btn btn-success">
+                                        Yes
+                                      </button>
+                                      <button class="btn btn-danger">No</button>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            <!-- * ######## Step1 Material ########### -->            
+                <div class="accordion-item">
+                  <div
+                    class="accordion-button collapsed shadow-none bg-white pl-0 py-0"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseMaterial"
+                    aria-expanded="false"
+                    aria-controls="collapseMaterial"
+                  >
+                    <div class="dropdown_btn">
+                      <div class="d-flex gap-4">
+                        <img
+                          class=""
+                          src="https://www.happybeds.co.uk/static/version1678690731/frontend/Elevate/theme/en_GB/Elevate_BespokeBeds/images/size.svg"
+                          alt="Scale"
+                          width="50px"
+                        />
+                        <div>
+                          <h3>Material</h3>
+                        </div>
+                      </div>
+                      <p class="avail-opt text-center p-1">
+                        4 categories available
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    id="collapseMaterial"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingMaterial"
+                    data-bs-parent="#accordionExample"
+                  >
+                  <div id="material-content">
+
+                  </div>
+                    <div class="accordion-body p-0 border-none">
+                      <div class="p-3 d-flex flex-wrap gap-2">
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item material-opt Suede"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Suede</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item material-opt Crush"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Crush</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item material-opt"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Plush</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item material-opt"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Naples</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item material-opt"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Leather</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item material-opt"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>ConistonHouse</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item material-opt"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Linen</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item material-opt"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Chenille</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item material-opt"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Wool</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item material-opt"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Mystic</p>
+                        </div>
+                      </div>
+                      <div class="colorContainer">
+                        <div
+                          id="SuedeContain"
+                          class="p-3"
+                          style="justify-content: space-around; display: none"
+                        >
+                          <div
+                            onclick="hanldleselectoption(this)"
+                            id="Suedecolor1"
+                            class="dropdown_item bed-shape-opt"
+                          >
+                            <img
+                              class="iconSize"
+                              src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/Plain%20Jane.png"
+                              alt=""
+                            />
+                            <p>Black Noir</p>
+                          </div>
+                          <div
+                            onclick="hanldleselectoption(this)"
+                            id="Suedecolor2"
+                            class="dropdown_item bed-shape-opt headboard active"
+                          >
+                            <img
+                              class="iconSize"
+                              src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/Plain%20Jane.png"
+                              alt=""
+                            />
+                            <p>Brown Cappucino</p>
+                          </div>
+                          <div
+                            onclick="hanldleselectoption(this)"
+                            id="Suedecolor3"
+                            class="dropdown_item bed-shape-opt headboard active"
+                          >
+                            <img
+                              class="iconSize"
+                              src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/Plain%20Jane.png"
+                              alt=""
+                            />
+                            <p>Slate Grey</p>
+                          </div>
+                          <div
+                            onclick="hanldleselectoption(this)"
+                            id="Suedecolor4"
+                            class="dropdown_item bed-shape-opt headboard active"
+                          >
+                            <img
+                              class="iconSize"
+                              src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/Plain%20Jane.png"
+                              alt=""
+                            />
+                            <p>Silver Pebble</p>
+                          </div>
+                          <div
+                            onclick="hanldleselectoption(this)"
+                            id="Suedecolor5"
+                            class="dropdown_item bed-shape-opt headboard active"
+                          >
+                            <img
+                              class="iconSize"
+                              src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/Plain%20Jane.png"
+                              alt=""
+                            />
+                            <p>Stone Mink</p>
+                          </div>
+                        </div>
+                        <div
+                          id="CrushContain"
+                          style="justify-content: space-around; display: none"
+                        >
+                          <div
+                            onclick="hanldleselectoption(this)"
+                            id="Plain jane"
+                            class="dropdown_item bed-shape-opt headboard active"
+                          >
+                            <img
+                              class="iconSize"
+                              src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/Plain%20Jane.png"
+                              alt=""
+                            />
+                            <p>Plain Jane</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            <!-- * ######## Step1 Upholstery Finish ########### -->            
+                <div class="accordion-item">
+                  <div
+                    class="accordion-button collapsed shadow-none bg-white pl-0 py-0"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapsepholstery"
+                    aria-expanded="false"
+                    aria-controls="collapsepholstery"
+                  >
+                    <div class="dropdown_btn">
+                      <div class="d-flex gap-4">
+                        <img
+                          class=""
+                          src="https://www.happybeds.co.uk/static/version1678690731/frontend/Elevate/theme/en_GB/Elevate_BespokeBeds/images/size.svg"
+                          alt="Scale"
+                          width="50px"
+                        />
+                        <div clas>
+                          <h3>Upholstery Finish </h3>
+                          <p>(Diamantes/Buttons)</p>                        
+                        </div>
+                      </div>
+                      <p class="avail-opt text-center p-1">
+                        2 categories available
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    id="collapsepholstery"
+                    class="accordion-collapse collapse"
+                    aria-labelledby="headingpholstery"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body p-0 border-none px-4">
+                      <div
+                        class="d-flex flex-wrap gap-2 align-items-center mb-2"
+                      >                        
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item upholstery-finish-opt"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Matching Fabric Buttons</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item upholstery-finish-opt"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Matching Fabric Buttons</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- TODO ######## Step2 ########### -->
+            <div
+              class="tab-pane fade"
+              id="step-2"
+              role="tabpanel"
+              aria-labelledby="step-2-tab"
+            >
+              <div class="accordion" id="accordionstep-2">
+                <div class="accordion-item">
+                  <div
+                    class="accordion-button collapsed shadow-none bg-white pl-0 py-0 py-0"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse2One"
+                    aria-expanded="true"
+                    aria-controls="collapse2One"
+                  >
+                    <div class="dropdown_btn">
+                      <div class="d-flex gap-4">
+                        <img
+                          class=""
+                          width="50px"
+                          src="https://www.happybeds.co.uk/static/version1678690731/frontend/Elevate/theme/en_GB/Elevate_BespokeBeds/images/size.svg"
+                        />
+                        <div>
+                          <h3>Headboard Height</h3>
+                          <!-- <p id="size_id">3ft small</p> -->
+                        </div>
+                      </div>
+                      <p class="avail-opt text-center p-1">
+                        3 option available
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    id="collapse2One"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <div class="p-3 d-flex flex-wrap gap-2">
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          id="3ft_small"
+                          class="dropdown_item size-opt active"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Standard Height</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          id="4ft_small_double"
+                          class="dropdown_item size-opt"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>54” Headboard</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          id="4ft_double"
+                          class="dropdown_item size-opt"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Custom Height – Send Enquiry</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <div
+                    class="accordion-button collapsed shadow-none bg-white pl-0 py-0 py-0"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse2Two"
+                    aria-expanded="true"
+                    aria-controls="collapse2Two"
+                  >
+                    <div class="dropdown_btn">
+                      <div class="d-flex gap-4">
+                        <img
+                          class=""
+                          src="https://www.happybeds.co.uk/static/version1678690731/frontend/Elevate/theme/en_GB/Elevate_BespokeBeds/images/size.svg"
+                          alt="Scale"
+                          width="50px"
+                        />
+                        <div>
+                          <h3>Footboard Height</h3>
+                          <!-- <p id="size_id">3ft small</p> -->
+                        </div>
+                      </div>
+                      <p class="avail-opt text-center p-1">
+                        4 option available
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    id="collapse2Two"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div class="accordion-body">
+                      <div class="p-3 d-flex flex-wrap gap-2">
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          id="3ft_small"
+                          class="dropdown_item size-opt active"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Petite Footboard</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          id="4ft_small_double"
+                          class="dropdown_item size-opt"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Moyen Footboard</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          id="4ft_small_double"
+                          class="dropdown_item size-opt"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Haute Footboard</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          id="4ft_double"
+                          class="dropdown_item size-opt"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Custom Height – Send Enquiry</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <div
+                    class="accordion-button collapsed shadow-none bg-white pl-0 py-0 py-0"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse2Three"
+                    aria-expanded="true"
+                    aria-controls="collapse2Three"
+                  >
+                    <div class="dropdown_btn">
+                      <div class="d-flex gap-4">
+                        <img
+                          class=""
+                          src="https://www.happybeds.co.uk/static/version1678690731/frontend/Elevate/theme/en_GB/Elevate_BespokeBeds/images/size.svg"
+                          alt="Scale"
+                          width="50px"
+                        />
+                        <div>
+                          <h3>Leg Options</h3>
+                          <p id="leg_id">Chrome Pipe Legs</p>
+                        </div>
+                      </div>
+                      <p class="avail-opt text-center p-1">
+                        12 option available
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    id="collapse2Three"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionstep-2"
+                  >
+                    <div class="accordion-body">
+                      <div class="p-3 d-flex flex-wrap gap-2">
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item legs-opt active"
+                        >
+                          <div class="none">
+                            <img
+                              class="iconSize"
+                              src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/None.png"
+                              alt=""
+                            />
+                          </div>
+                          <p>No Legs</p>
+                        </div>
+                        <h5 class="w-100">Metal Legs</h5>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item legs-opt"
+                        >
+                          <img
+                            class="iconSize"
+                            src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/Chrome%20L%20corner%20Legs.png"
+                            alt=""
+                          />
+                          <p>Chrome Pipe Legs</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item legs-opt"
+                        >
+                          <img
+                            class="iconSize"
+                            src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/Chrome_L_Corner_Leg_3ft.png"
+                            alt=""
+                          />
+                          <p>Chrome L Corner Legs</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item legs-opt"
+                        >
+                          <img
+                            class="iconSize"
+                            src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/Chrome%20Tube%20Stand.png"
+                            alt=""
+                          />
+                          <p>Chrome Tube Stand</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item legs-opt"
+                        >
+                          <img
+                            class="iconSize"
+                            src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/Chrome%20Glides.png"
+                            alt=""
+                          />
+                          <p>Chrome Glides</p>
+                        </div>
+                        <h5 class="w-100">Wooden Legs</h5>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item legs-opt"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Sanded Wooden Bun</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item legs-opt"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Natural Wooden Bun</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item legs-opt"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Mahogany Wooden Bun</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item legs-opt"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Dark Wooden Bun</p>
+                        </div>
+                        <h5 class="w-100">Wooden Legs With Silver Nickel</h5>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item legs-opt"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Dark Natural–Silver Cup</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item legs-opt"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Wenge Black–Silver Cup</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <div
+                    class="accordion-button collapsed shadow-none bg-white pl-0 py-0 py-0"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse2Four"
+                    aria-expanded="true"
+                    aria-controls="collapse2Four"
+                  >
+                    <div class="dropdown_btn">
+                      <div class="d-flex gap-4">
+                        <img
+                          class=""
+                          src="https://www.happybeds.co.uk/static/version1678690731/frontend/Elevate/theme/en_GB/Elevate_BespokeBeds/images/size.svg"
+                          alt="Scale"
+                          width="50px"
+                        />
+                        <div>
+                          <h3>
+                            Frame Support <br />
+                            Storage Options
+                          </h3>
+                          <p id="storage_id">Solid Flat Wooden Slats</p>
+                        </div>
+                      </div>
+                      <p class="avail-opt text-center p-1">
+                        3 option available
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    id="collapse2Four"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionstep-3"
+                  >
+                    <div class="accordion-body">
+                      <div class="p-3 d-flex flex-wrap gap-2">
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item storage-opt active"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Solid Flat Wooden Slats</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item storage-opt"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Crush Solid PlatformBase Board</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item storage-opt"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Premium Reinforced GasLift Ottoman</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <div
+                    class="accordion-button collapsed shadow-none bg-white pl-0 py-0 py-0"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse2FIve"
+                    aria-expanded="true"
+                    aria-controls="collapse2FIve"
+                  >
+                    <div class="dropdown_btn">
+                      <div class="d-flex gap-4">
+                        <img
+                          class=""
+                          src="https://www.happybeds.co.uk/static/version1678690731/frontend/Elevate/theme/en_GB/Elevate_BespokeBeds/images/size.svg"
+                          alt="Scale"
+                          width="50px"
+                        />
+                        <div>
+                          <h3>UnderBed Lower <br />Floor Platform</h3>
+                          <p id="underbed_id">Not Required</p>
+                        </div>
+                      </div>
+                      <p class="avail-opt text-center p-1">
+                        3 option available
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    id="collapse2FIve"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionstep-3"
+                  >
+                    <div class="accordion-body">
+                      <div class="p-3 d-flex flex-wrap gap-2">
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item underbed-opt active"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Not Required</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item underbed-opt"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Lower Board Required</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- TODO ######## Step3 ########### -->
+            <div
+              class="tab-pane fade"
+              id="step-4"
+              role="tabpanel"
+              aria-labelledby="step-4-tab"
+            >
+              <div class="accordion" id="accordionstep-4">
+                <div class="accordion-item">
+                  <div
+                    class="accordion-button collapsed shadow-none bg-white pl-0 py-0 py-0"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse4One"
+                    aria-expanded="true"
+                    aria-controls="collapse4One"
+                  >
+                    <div class="dropdown_btn">
+                      <div class="d-flex gap-4">
+                        <img
+                          class=""
+                          src="https://www.happybeds.co.uk/static/version1678690731/frontend/Elevate/theme/en_GB/Elevate_BespokeBeds/images/size.svg"
+                          alt="Scale"
+                          width="50px"
+                        />
+                        <div>
+                          <h3>Mattress Options</h3>
+                          <p id="matress_id">Orthopaedic Memory</p>
+                        </div>
+                      </div>
+                      <p class="avail-opt text-center p-1">
+                        3 option available
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    id="collapse4One"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionstep-4"
+                  >
+                    <div class="accordion-body">
+                      <div class="p-3 d-flex flex-wrap gap-2">
+                        <div
+                          onclick="pockets(this)"
+                          class="dropdown_item matress-opt"
+                        >
+                          <img
+                            class="iconSize"
+                            src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/Orthopaedic%20MEmory.png"
+                            alt=""
+                          />
+                          <p>Orthopaedic Memory</p>
+                        </div>
+                        <div
+                          onclick="pockets(this)"
+                          class="dropdown_item matress-opt MemoryPocket"
+                          id="MemoryPocket"
+                        >
+                          <img
+                            class="iconSize"
+                            src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/Memory%20Pocket.png"
+                            alt=""
+                          />
+                          <p>Memory Pocket</p>
+                        </div>
+                        <div
+                          onclick="pockets(this)"
+                          class="dropdown_item matress-opt PremiumPocket"
+                          id="PremiumPocket"
+                        >
+                          <img
+                            class="iconSize"
+                            src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/Premium%20Pocket%20Natural.png"
+                            alt=""
+                          />
+                          <p>Premium Pocket Natural</p>
+                        </div>
+                        <div
+                          onclick="pockets(this)"
+                          class="dropdown_item matress-opt LuxuryPocket"
+                          id="LuxuryPocket"
+                        >
+                          <img
+                            class="iconSize"
+                            src="https://cdn.shopify.com/s/files/1/0518/2157/6345/t/3/assets/Luxury%20Pocket%20Pilow%20Natural.png"
+                            alt=""
+                          />
+                          <p>Luxury Pocket Pillow Natural</p>
+                        </div>
+                        <div id="pockets" style="display: none">
+                          <div
+                            onclick="hanldleselectoption(this)"
+                            class="dropdown_item matress-opt active"
+                          >
+                            <img class="iconSize" alt="" />
+                            <p>1000 Pockets</p>
+                          </div>
+                          <div
+                            onclick="hanldleselectoption(this)"
+                            class="dropdown_item matress-opt active"
+                          >
+                            <img class="iconSize" alt="" />
+                            <p>2000 Pockets</p>
+                          </div>
+                          <div
+                            onclick="hanldleselectoption(this)"
+                            class="dropdown_item matress-opt active"
+                          >
+                            <img class="iconSize" alt="" />
+                            <p>3000 Pockets</p>
+                          </div>
+                        </div>
+                        <p>
+                          On Pocket Matts Give Option To Choose Pocket Size And
+                          Add As Per Pricing
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <div
+                    class="accordion-button collapsed shadow-none bg-white pl-0 py-0 py-0"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse4Two"
+                    aria-expanded="true"
+                    aria-controls="collapse4Two"
+                  >
+                    <div class="dropdown_btn">
+                      <div class="d-flex gap-4">
+                        <img
+                          class=""
+                          src="https://www.happybeds.co.uk/static/version1678690731/frontend/Elevate/theme/en_GB/Elevate_BespokeBeds/images/size.svg"
+                          alt="Scale"
+                          width="50px"
+                        />
+                        <div>
+                          <h3>Ottoman Box Options</h3>
+                          <p id="ottmanbox_id">Standard Size</p>
+                        </div>
+                      </div>
+                      <p class="avail-opt text-center p-1">
+                        3 option available
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    id="collapse4Two"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionstep-4"
+                  >
+                    <div class="accordion-body">
+                      <div class="p-3 d-flex flex-wrap gap-2">
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item ottmanbox-opt"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Not Required</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item ottmanbox-opt active"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Standard Size</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item ottmanbox-opt"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Same Width As Bed</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- TODO ######## Step4 ########### -->
+            <div
+              class="tab-pane fade"
+              id="step-5"
+              role="tabpanel"
+              aria-labelledby="step-5-tab"
+            >
+              <div class="accordion" id="accordionstep-5">
+                <div class="accordion-item">
+                  <div
+                    class="accordion-button collapsed shadow-none bg-white pl-0 py-0 py-0"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse5One"
+                    aria-expanded="true"
+                    aria-controls="collapse5One"
+                  >
+                    <div class="dropdown_btn">
+                      <div class="d-flex gap-4">
+                        <img
+                          class=""
+                          src="https://www.happybeds.co.uk/static/version1678690731/frontend/Elevate/theme/en_GB/Elevate_BespokeBeds/images/size.svg"
+                          alt="Scale"
+                          width="50px"
+                        />
+                        <div>
+                          <h3>
+                            Specialist Assembly <br />
+                            Service
+                          </h3>
+                          <p id="assembly_id">Not Required</p>
+                        </div>
+                      </div>
+                      <p class="avail-opt text-center p-1">
+                        3 option available
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    id="collapse5One"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionstep-5"
+                  >
+                    <div class="accordion-body">
+                      <div class="p-3 d-flex flex-wrap gap-2">
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item assembly-opt active"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Not Required</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item assembly-opt"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Assembly Required</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <div
+                    class="accordion-button collapsed shadow-none bg-white pl-0 py-0 py-0"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse5Two"
+                    aria-expanded="true"
+                    aria-controls="collapse5Two"
+                  >
+                    <div class="dropdown_btn">
+                      <div class="d-flex gap-4">
+                        <img
+                          class=""
+                          src="https://www.happybeds.co.uk/static/version1678690731/frontend/Elevate/theme/en_GB/Elevate_BespokeBeds/images/size.svg"
+                          alt="Scale"
+                          width="50px"
+                        />
+                        <div>
+                          <h3>Disposal &amp; Removal Options</h3>
+                          <p id="removal_id">Removal Note Required</p>
+                        </div>
+                      </div>
+                      <p class="avail-opt text-center p-1">
+                        3 option available
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    id="collapse5Two"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionstep-4"
+                  >
+                    <div class="accordion-body">
+                      <div class="p-3 d-flex flex-wrap gap-2">
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item removal-opt active"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Removal Note Required</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item removal-opt"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Packaging Removal</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item removal-opt active"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Bed Base Removal</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item removal-opt"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Mattress Removal</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item removal-opt"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Bed &amp; Mattress Removal</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <div
+                    class="accordion-button collapsed shadow-none bg-white pl-0 py-0 py-0"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse5Three"
+                    aria-expanded="true"
+                    aria-controls="collapse5Three"
+                  >
+                    <div class="dropdown_btn">
+                      <div class="d-flex gap-4">
+                        <img
+                          class=""
+                          src="https://www.happybeds.co.uk/static/version1678690731/frontend/Elevate/theme/en_GB/Elevate_BespokeBeds/images/size.svg"
+                          alt="Scale"
+                          width="50px"
+                        />
+                        <div>
+                          <h3>Preferred Delivery Date</h3>
+                        </div>
+                      </div>
+                      <!-- <p class="avail-opt text-center p-1">
+                                3 option available
+                              </p> -->
+                    </div>
+                  </div>
+                  <div
+                    id="collapse5Three"
+                    class="accordion-collapse collapse"
+                    data-bs-parent="#accordionstep-4"
+                  >
+                    <div class="accordion-body">
+                      <div class="p-3 d-flex flex-wrap gap-2">
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item removal-opt active"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Deliver As Soon As Possible</p>
+                        </div>
+                        <div
+                          onclick="hanldleselectoption(this)"
+                          class="dropdown_item removal-opt"
+                        >
+                          <img class="iconSize" alt="" />
+                          <p>Delay My Delivery Until After</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+      
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</html>
+<!-- <div class="w-100 p-4 d-flex justify-content-between align-items-center step-1">
+    <p>Move to next Step</p>
+    <button class="btn btn-primary col-4" onclick="nextstep(this)">Next</button>
+</div -->
+<!-- <div class="select-container">
+    <div class="dropdown_btn" class="" onclick="togglemenu(this)">
+        <div class="d-flex gap-4">
+            <img src="https://www.happybeds.co.uk/static/version1678690731/frontend/Elevate/theme/en_GB/Elevate_BespokeBeds/images/size.svg"
+                alt="Scale" width="50px">
+            <div>
+                <h3>Size</h3>
+                <p id="size_id">3ft small</p>
+            </div>
+        </div>
+        <p class="avail-opt text-center"> 6 option available</p>
+    </div>
+    <div id="dropdown-menu" class="p-3">
+        <div onclick="hanldleselectoption(this)" id="3ft_small" class="dropdown_item size-opt  active">
+            <img src="" alt="" width="120px" height="120px">
+            <p>3FT Single</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="4ft_small_double" class="dropdown_item size-opt">
+            <img src="" alt="" width="120px" height="120px">
+            <p>4FT Small Double</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="4ft_double" class="dropdown_item size-opt">
+            <img src="" alt="" width="120px" height="120px">
+            <p>4FT6 Double</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="5ft_king" class="dropdown_item size-opt">
+            <img src="" alt="" width="120px" height="120px">
+            <p>5FT King </p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="6ft_superking" class="dropdown_item size-opt">
+            <img src="" alt="" width="120px" height="120px">
+            <p>6FT SuperKing</p>
+        </div>
+        
+    </div>
+</div>
+<div class="select-container">
+    <div class="dropdown_btn" onclick="togglemenu(this)">
+        <div class="d-flex gap-4">
+            <img src="https://www.happybeds.co.uk/static/version1678690731/frontend/Elevate/theme/en_GB/Elevate_BespokeBeds/images/size.svg"
+                alt="Scale" width="50px">
+            <div>
+                <h3>BedFrame Shape</h3>
+                <div class="">
+                    <div class="d-flex">
+                        footboard : <p id="headboard_id"> Plain Jane</p>
+                    </div>
+                    <div class="d-flex">
+                        FootBoard : <p id="footboard_id"> Plain Jane</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="avail-opt"> 2 categories available</p>
+    </div>
+    <div id="dropdown-menu" class="p-3">
+        <h3 class="w-100 fdark">1. HeadBoard</h3>
+        <div onclick="hanldleselectoption(this)" id="Plain jane" class="dropdown_item bed-upholstery-opt headboard  active">
+            <img src="" alt="" width="120px" height="120px">
+            <p>Plain Jane</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="Rose" class="dropdown_item bed-shape-opt headboard">
+            <img src="" alt="" width="120px" height="120px">
+         <p>Rose</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="Kensington" class="dropdown_item bed-shape-opt headboard">
+            <img src="" alt="" width="120px" height="120px">
+            <p>Kensington</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="knightsbridge" class="dropdown_item bed-shape-opt headboard">
+            <img src="" alt="" width="120px" height="120px">
+            <p>Knightsbridge</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="Hampton" class="dropdown_item bed-shape-opt headboard">
+            <img src="" alt="" width="120px" height="120px">
+            <p>Hampton</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="Eva" class="dropdown_item bed-shape-opt headboard">
+            <img src="" alt="" width="120px" height="120px">
+            <p>Eva</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="Arabella" class="dropdown_item bed-shape-opt headboard">
+            <img src="" alt="" width="120px" height="120px">
+            <p>Arabella</p>
+        </div>
+        <h3 class="w-100 fdark">2.FootBoard</h3>
+        <div onclick="hanldleselectoption(this)" id="Plain jane" class="dropdown_item bed-shape-opt footboard  active">
+            <img src="" alt="" width="120px" height="120px">
+            <p>Plain Jane</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="Rose" class="dropdown_item bed-shape-opt footboard">
+            <img src="" alt="" width="120px" height="120px">
+         <p>Rose</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="Kensington" class="dropdown_item bed-shape-opt footboard">
+            <img src="" alt="" width="120px" height="120px">
+            <p>Kensington</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="knightsbridge" class="dropdown_item bed-shape-opt footboard">
+            <img src="" alt="" width="120px" height="120px">
+            <p>Knightsbridge</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="Hampton" class="dropdown_item bed-shape-opt footboard">
+            <img src="" alt="" width="120px" height="120px">
+            <p>Hampton</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="Eva" class="dropdown_item bed-shape-opt footboard">
+            <img src="" alt="" width="120px" height="120px">
+            <p>Eva</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="Arabella" class="dropdown_item bed-shape-opt footboard">
+            <img src="" alt="" width="120px" height="120px">
+            <p>Arabella</p>
+        </div>
+    </div>
+</div>
+<div class="select-container">
+    <div class="dropdown_btn" onclick="togglemenu(this)">
+        <div class="d-flex gap-4">
+            <img src="https://www.happybeds.co.uk/static/version1678690731/frontend/Elevate/theme/en_GB/Elevate_BespokeBeds/images/size.svg"
+                alt="Scale" width="50px">
+            <div>
+                <h3>Bed Frame Height</h3>
+                <div class="">
+                    <div class="d-flex">
+                        Headboard : <p id="headboard_height_id"> Plain Jane</p>
+                    </div>
+                    <div class="d-flex">
+                        FootBoard : <p id="footboard_height_id"> Plain Jane</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="avail-opt"> 2 categories available</p>
+    </div>
+    <div id="dropdown-menu" class="p-3">
+        <h3 class="w-100 fdark">1. HeadBoard</h3>
+        <div onclick="hanldleselectoption(this)" id="Standard Height" class="dropdown_item bed-height-opt headboard  active">
+            <img src="" alt="" width="120px" height="120px">
+            <p>Standard Height</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="54 Headoard" class="dropdown_item bed-height-opt headboard">
+            <img src="" alt="" width="120px" height="120px">
+         <p>54" Headoard</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="custom" class="dropdown_item bed-height-opt headboard">
+            <img src="" alt="" width="120px" height="120px">
+            <p>Custom Height</p>
+        </div>
+        
+        <h3 class="w-100 fdark">2.FootBoard</h3>
+        <div onclick="hanldleselectoption(this)" id="Petite FootBoard" class="dropdown_item bed-height-opt footboard  active">
+            <img src="" alt="" width="120px" height="120px">
+            <p>Petite FootBoard</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="Moyen Footboard" class="dropdown_item bed-height-opt footboard">
+            <img src="" alt="" width="120px" height="120px">
+         <p>Moyen Footboard</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="Haute FootBoard" class="dropdown_item bed-height-opt footboard">
+            <img src="" alt="" width="120px" height="120px">
+            <p>Haute FootBoard</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="custom" class="dropdown_item bed-height-opt footboard">
+            <img src="" alt="" width="120px" height="120px">
+            <p>Custom Height</p>
+        </div>
+    </div>
+</div>
+<div class="select-container">
+    <div class="dropdown_btn" onclick="togglemenu(this)">
+        <div class="d-flex gap-4">
+            <img src="https://www.happybeds.co.uk/static/version1678690731/frontend/Elevate/theme/en_GB/Elevate_BespokeBeds/images/size.svg"
+                alt="Scale" width="50px">
+            <div>
+                <h3>Upholstery Design</h3>
+                <div class="">
+                    <div class="d-flex">
+                        Headboard : <p id="headboard_design_id"> Plain Jane</p>
+                    </div>
+                    <div class="d-flex">
+                        FootBoard : <p id="footboard_design_id"> Plain Jane</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="avail-opt"> 2 categories available</p>
+    </div>
+    <div id="dropdown-menu" class="p-3">
+        <h3 class="w-100 fdark">1. HeadBoard - Upholstery</h3>
+        <div onclick="hanldleselectoption(this)" id="Plain" class="dropdown_item bed-shape-opt headboard  active">
+            <img src="" alt="" width="120px" height="120px">
+            <p>Plain</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="Lines horizontal - large" class="dropdown_item bed-shape-opt headboard">
+            <img src="" alt="" width="120px" height="120px">
+         <p>Lines horizontal - large</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="Lines Horizontal - small" class="dropdown_item bed-shape-opt headboard">
+            <img src="" alt="" width="120px" height="120px">
+            <p>Lines Horizontal - small</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="Lines Vertical - large" class="dropdown_item bed-shape-opt headboard">
+            <img src="" alt="" width="120px" height="120px">
+            <p>Lines Vertical - large</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="Lines Vertical - small" class="dropdown_item bed-shape-opt headboard">
+            <img src="" alt="" width="120px" height="120px">
+            <p>Lines Vertical - small</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="Cube Design - Large" class="dropdown_item bed-shape-opt headboard">
+            <img src="" alt="" width="120px" height="120px">
+            <p>Cube Design - Large</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="Sunrise" class="dropdown_item bed-shape-opt headboard">
+            <img src="" alt="" width="120px" height="120px">
+            <p>Sunrise</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="Victoria" class="dropdown_item bed-shape-opt headboard">
+            <img src="" alt="" width="120px" height="120px">
+            <p>Victoria</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="ChesterField-Large" class="dropdown_item bed-shape-opt headboard">
+            <img src="" alt="" width="120px" height="120px">
+            <p>ChesterField-Large</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="Chesterfield-Small" class="dropdown_item bed-shape-opt headboard">
+            <img src="" alt="" width="120px" height="120px">
+            <p>Chesterfield-Small</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="Majestic - Multi Panel" class="dropdown_item bed-shape-opt headboard">
+            <img src="" alt="" width="120px" height="120px">
+            <p>Majestic - Multi Panel</p>
+        </div>
+        <h3 class="w-100 fdark">2.FootBoard</h3>
+        <div onclick="hanldleselectoption(this)" id="Plain" class="dropdown_item bed-shape-opt footboard  active">
+            <img src="" alt="" width="120px" height="120px">
+            <p>Plain</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="Lines horizontal - large" class="dropdown_item bed-shape-opt footboard">
+            <img src="" alt="" width="120px" height="120px">
+         <p>Lines horizontal - large</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="Lines Vertical - small" class="dropdown_item bed-shape-opt footboard">
+            <img src="" alt="" width="120px" height="120px">
+            <p>Lines Vertical - small</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="Lines Vertical - large" class="dropdown_item bed-shape-opt footboard">
+            <img src="" alt="" width="120px" height="120px">
+            <p>Lines Vertical - large</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="Lines Vertical - small" class="dropdown_item bed-shape-opt footboard">
+            <img src="" alt="" width="120px" height="120px">
+            <p>Lines Vertical - small</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="Cube Design - Large" class="dropdown_item bed-shape-opt footboard">
+            <img src="" alt="" width="120px" height="120px">
+            <p>Cube Design - Large</p>
+        </div>
+        <div onclick="hanldleselectoption(this)" id="Majestic - Multi Panel" class="dropdown_item bed-shape-opt footboard">
+            <img src="" alt="" width="120px" height="120px">
+            <p>Majestic - Multi Panel</p>
+        </div>
+    </div>
+</div> -->
